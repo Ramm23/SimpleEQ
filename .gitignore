@@ -1,0 +1,14 @@
+# CMake
+/build*/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+
+# JUCE build tools
+JUCE/tools/
+JUCE/extras/Build/juceaide/CMakeFiles/
+JUCE/extras/Build/juceaide/CMakeCache.txt
+
+# IDE
+.idea/
+.vscode/
