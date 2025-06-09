@@ -3,7 +3,7 @@
 //
 #include "PluginEditor.h"
 
-MyAudioPluginAudioProcessorEditor::MyAudioPluginAudioProcessorEditor(MyAudioPluginAudioProcessor& p)
+MyAudioPluginAudioProcessorEditor::MyAudioPluginAudioProcessorEditor(SimpleEQAudioProcessor& p)
     : AudioProcessorEditor(&p), audioProcessor(p)
 {
     setSize(400, 300);

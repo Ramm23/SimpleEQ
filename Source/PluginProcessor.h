@@ -6,11 +6,13 @@
 
 #include <juce_audio_processors/juce_audio_processors.h>
 
-class MyAudioPluginAudioProcessor : public juce::AudioProcessor
+
+
+class SimpleEQAudioProcessor : public juce::AudioProcessor
 {
 public:
-    MyAudioPluginAudioProcessor();
-    ~MyAudioPluginAudioProcessor() override;
+    SimpleEQAudioProcessor();
+    ~SimpleEQAudioProcessor() override;
 
     void prepareToPlay(double sampleRate, int samplesPerBlock) override;
     void releaseResources() override;
@@ -36,4 +38,11 @@ public:
 
     void getStateInformation(juce::MemoryBlock& destData) override;
     void setStateInformation(const void* data, int sizeInBytes) override;
+
+
+     juce::AudioProcessorValueTreeState apvts{ *this, nullptr, "Parameters", createParameterLayout()};
+
+    private:
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(SimpleEQAudioProcessor);
+
 };

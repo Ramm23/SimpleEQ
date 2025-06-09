@@ -10,12 +10,12 @@
 class MyAudioPluginAudioProcessorEditor : public juce::AudioProcessorEditor
 {
 public:
-    MyAudioPluginAudioProcessorEditor(MyAudioPluginAudioProcessor&);
+    MyAudioPluginAudioProcessorEditor(SimpleEQAudioProcessor&);
     ~MyAudioPluginAudioProcessorEditor() override;
 
     void paint(juce::Graphics&) override;
     void resized() override;
 
 private:
-    MyAudioPluginAudioProcessor& audioProcessor;
+    SimpleEQAudioProcessor& audioProcessor;
 };
